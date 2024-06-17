@@ -14,6 +14,7 @@ V oficiálnej dokumentácii som našiel iné riešenie ako som vytvoril ja, ale 
 Toto riešenie obsahovalo isté vstavané metódy, a vôbec nebolo použité nič priamo s JSON (Serialize, Deserialize).
 
 Mojou najväčšou neistotou je samotný message objekt. V dokumentácii som našiel, že by mal nadobúdať následovný formát :
+```text
 var requestBody = new SendMailPostRequestBody
 {
 	Message = new Message
@@ -47,6 +48,7 @@ var requestBody = new SendMailPostRequestBody
 	},
 	SaveToSentItems = false,
 };
+```
 
 Bohužial ani v tomto prípade, sa mi nepodarilo dosiahnúť toho, aby kód fungoval. A tak som sa rozhodol využiť Dictionary,
 ktorý má podobný formát ako JSON.
